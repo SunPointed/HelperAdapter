@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by luoqiuyu on 2017/3/30.
  */
 
-public class TestAdapter extends HelperAdapter<TestBean, TestAdapter.ViewHolder>{
+public class TestAdapter extends HelperAdapter<TestAdapter.ViewHolder>{
 
     public TestAdapter(Context context, ArrayList<TestBean> datas) {
         super(context, datas, ViewHolder.class);
@@ -33,7 +33,7 @@ public class TestAdapter extends HelperAdapter<TestBean, TestAdapter.ViewHolder>
 
     @Override
     protected void showPerformance(int position, View convertView, ViewGroup parent, ViewHolder viewHolder) {
-        TestBean item = mDatas.get(position);
+        TestBean item = (TestBean) mDatas.get(position);
         viewHolder.tv.setText(item.test);
     }
 

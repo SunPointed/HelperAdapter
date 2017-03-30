@@ -11,13 +11,13 @@ import java.util.List;
  * Created by luoqiuyu on 2017/3/28.
  */
 
-public abstract class HelperAdapter<model, holder> extends BaseAdapter {
+public abstract class HelperAdapter<holder> extends BaseAdapter {
 
-    protected List<model> mDatas;
+    protected List mDatas;
     protected Context mContext;
     private Class<holder> mClass;
 
-    public HelperAdapter(Context context, List<model> datas, Class<holder> clazz) {
+    public HelperAdapter(Context context, List datas, Class<holder> clazz) {
         mDatas = datas;
         mContext = context;
         mClass = clazz;
